@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block head %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+<script src="/includes/util.js"></script>
+<script src="/includes/Chart.min.js"></script>
+{% endblock %}
+
+{% block body %}
+<canvas id="chartarea" width="200" height="200"></canvas>
+<script>
+drawPcapChart("SAMPLE TEXT",{{pcap_json_obj|safe}});
+</script>
+{% endblock %}
